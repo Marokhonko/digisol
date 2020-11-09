@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $colorDark;
+}
+.container {
+    padding: 0 95px;
+}
+ul > li {
+    list-style-type: none;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+.rounded {
+    width: 157px;
+    height: 157px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    transition: background 0.3s linear;
+    left: 75%;
+    cursor: pointer;
+    &:after {
+        font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            max-width: 68px;
+            display: block;
+            text-align: right;
+            position: absolute;
+            top: 30%;
+            right: 27px;
+    }
+        &:before {
+            content: url('../img/icons/Vector.svg');
+            position: absolute;
+            display: block;
+            top: 45%;
+            transition: transform 0.3s linear;
+            transform: translateX(-65%);
+        }
+    &:hover {
+        &:before {
+                transform: translateX(-40%);  
+            }
+    }
+    &--brown {
+         border: 1px solid $colorBrown;
+         left: 46%;
+         &:hover {
+            background: $colorBrown;
+            
+        }
+    
+        &:after {
+            content: 'FIND YOUR FLAVOR';
+            max-width: 86px;     
+        }
+    }
+    &--green {
+        border: 1px solid $colorGreen;
+    
+        &:hover {
+            background: $colorGreen;
+            
+        }
+        &:after {
+            content: 'OUR SECRET';   
+        }
+    }
+    &--orange {
+        border: 1px solid $colorOrange;
+    
+        &:hover {
+            background: $colorOrange;
+            
+        }
+    
+        
+    }
+    &--flavor {
+        left:63%;
+        &:after {
+            content: 'FIND YOUR FLAVOR';
+            max-width: 86px;    
+        }
+    } 
+    &--ideology {
+        left:90%;
+        &:after {
+            content: 'OUR ideology';
+            max-width: 81px;    
+            text-transform: uppercase;
+        }
+    } 
+    &--reply {
+        left:36%;
+        &:after {
+            content: 'Get Pearly';
+            max-width: 59px;    
+            text-transform: uppercase;
+        }
+    } 
+    &--get {
+        left:53%;
+        margin-top: 40px;
+        &:after {
+            content: 'get Yours';
+            max-width: 54px;    
+            text-transform: uppercase;
+        }
+    } 
+    
+    
+}

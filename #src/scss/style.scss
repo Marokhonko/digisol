@@ -1,0 +1,423 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+    }
+    }
+
+@import './fonts';
+@import './vars';
+@import './base';
+@import './header';
+
+.hero {
+    max-width: 100%;
+    background: #EEE2D7;
+    // position: relative;
+    padding-bottom: 160px;
+    margin-bottom: 425px;
+}
+.under-text {
+  padding-top: 100px;
+  background-image: url(../img/font.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 115px;
+  padding-bottom: 220px;
+}
+
+
+.inside-block {
+    // position: relative;
+    // z-index: 2;
+    // max-width: 1384px;
+    // margin: 0 auto;
+    // display: block;
+    // bottom: 580px;
+    // height: 0;
+
+}
+.h1 {
+font-family: $fontBlacker;
+font-style: normal;
+font-weight: normal;
+font-size: 133px;
+line-height: 104.8%;
+text-align: center;
+color: $colorDark;
+z-index: 3;
+position: relative
+}
+
+.hero-img {
+    z-index: -1;
+    left: calc(50% - 398px);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 270px;
+    z-index: 2;
+}
+.info {
+    max-width: 236px;
+    position: absolute;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    margin-top: 95px;
+    color: $colorDark;
+    left: 12%;
+
+
+}
+.rounded-block {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: $colorDark;
+    right: 0;
+    position: absolute;
+    text-transform: uppercase;
+    right: 15.5%;
+    margin-top: 35px;
+    text-transform: uppercase;
+    width: 188px;
+    z-index: 4;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 231px;
+        height: 231px;
+        border-radius: 50%;
+        border: 1px solid $colorOrange;
+        right: 75px;
+        top: -70px;
+    }
+    &:after {
+        content: url('../img/icons/sprite.svg#Frame');
+        width: 33px;
+        height: auto;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 210px;
+    }
+    
+}
+
+.wellnes {
+    // display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 88px;
+  
+}
+.sub-title {
+    text-align: center;
+    color: $colorOrange;
+    font-size: 18px;
+    line-height: 35px;
+    font-family: $fontBlacker;
+    margin-bottom: 28px;
+}
+.paragraph {
+    text-align: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    color: $colorDark;
+    margin-bottom: 44px;
+  
+  }
+
+.ingradients {
+    margin-top: 38px;
+    // margin-bottom: 110px;
+}
+.text-side {
+    margin-left: 80px;
+}
+.ingradients-about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 72px;
+    font-family: $fontBlacker;
+    margin-bottom: 70px;
+}
+
+.info-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 33px;
+    position: relative;
+    margin-left: 64px;
+    margin-bottom: 44px;
+    &:before {
+        content: '';
+        background: $colorOrange;
+        width: 43px;
+        height: 2px;
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: -65px;
+    }
+}
+.ingradients-steps {
+    max-width: 1465px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.number {
+    position: relative;
+    &:before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        opacity: .5;
+
+    }
+    &:after {
+        position: absolute;
+                font-size: 18px;
+                line-height: 35px;
+                font-family: $fontBlacker;
+    }
+        &--first {
+            &:before {
+                content: '';
+                background: #EEE2D7;
+                bottom: 0;
+        
+            }
+            &:after {
+                content: 'Choose';
+                position: absolute;
+                font-size: 18px;
+                line-height: 35px;
+                font-family: $fontBlacker;
+                bottom: 0;
+
+            }
+        }
+
+        &--second {
+            left: 15%;
+            &:before {
+                content: '';
+                background: #D4E0DC;
+                left: 30%;
+                top: 55%;
+        
+            }
+            &:after {
+                content: 'Mix';
+                bottom: 0;
+                left: 25%;
+
+            }
+        }
+
+        &--third {
+            left: 14%;
+            &:before {
+                content: '';
+                background: #D6C5BF;
+                left: 45%;
+                top: 40%;
+        
+            }
+            &:after {
+                content: 'Shine';
+                top: 80%;
+                left: 25%;
+
+            }
+        }
+        .number-icon {
+            position: relative;
+            left: 28%;
+            }
+    }
+
+.step-info {
+    text-align: center;
+    margin-top: 12px;
+}    
+
+
+.outer {
+    margin-top: 275px;
+    position: relative;
+}
+
+.outer-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: center;
+  
+}
+.outer-about {
+    .text-side {
+        margin-top: 77px;
+        .info-text {
+            max-width: 548px;
+        }
+    }
+}
+.outer-infographick {
+    position: absolute;
+    width: 89.3%;
+    background: $colorGreen;
+    left: 0;
+    top: 81%;
+}
+
+.infographick-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 82%;
+    margin: 0 auto;
+    padding: 9.66% 0;
+    
+}
+.infographick-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.i-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-bottom: 20px;
+}
+.i-text {
+    text-align: center;
+}
+
+
+.the-first-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.the-first-about {
+    .text-side {
+        margin-left: 165px;
+        .info-text {
+            max-width: 273px;
+        }
+    }
+}
+
+.jornal {
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 260px;
+    margin-bottom: 280px;
+    .title {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        z-index: 3;
+        margin: 0;
+        display: block;
+        transform: translateY(-45px);
+    }
+}
+
+
+.jornal-slider {
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(320px, 1fr));
+    min-width: 130%;
+    transform: translateX(-170px)
+}
+.jornal-slide {
+    position: relative;
+    max-width: 445px;
+    display: block;
+    padding-bottom: 28px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .3s linerar;
+    .slide-img-holder {
+        height: 445px;
+        max-width: 445px;
+    }
+    img {
+        height: 445px;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .slide-text {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: #000;
+        margin-top: 28px;
+    }
+}
+.hidden-block {
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity .3s linear;
+
+}
+
+.circle-btn {
+    width: 129px;
+    height: 129px;
+    border-radius: 50%;
+    background: $colorOrange;
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 45px;
+}
+.jornal-slide:hover {
+    border-bottom: 2px solid $colorOrange;
+}
+.jornal-slide:hover .hidden-block {
+    opacity: 1;
+}
+@import "./_reviews";
+@import "./_footer";
+@import "./page";
